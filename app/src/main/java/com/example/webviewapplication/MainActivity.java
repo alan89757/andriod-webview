@@ -11,6 +11,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.View;
 
 import android.view.Menu;
@@ -61,6 +62,7 @@ public class MainActivity extends AppCompatActivity {
        * @return 本地jquery
        */
       private WebResourceResponse editResponse() {
+//        Log.i(TAG, "editResponse: ", getAssets());
         try {
           return new WebResourceResponse("application/x-javascript", "utf-8", getAssets().open("jquery.js"));
         } catch (IOException e) {
